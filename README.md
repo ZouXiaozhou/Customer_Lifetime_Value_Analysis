@@ -43,4 +43,10 @@ The purchase count and monetary value are modelled by two separate models. The p
 
 //three_data_format
 
+The statistical modeling tool that is use to solve this problem is lifetimes, which is a Python package that’s specifically used to solve the customer lifetime value problem.
+
+The lifetimes package provides three different models (Pareto/Negative Binomial Distribution model, Beta Geometric model, Modified Beta Geometric model) for modeling customer purchases and Gamma Gamma model for modeling the monetary value of customer purchases. For each of the three models that might be used for modeling and prediction, the package gives control to the user one parameter called penalizer coefficient, which acts as a regularization to prevent the model from overfitting. The optimal penalizer coefficient will be selected by cross validation and candidates are 0, 0.001, 0.01, 0.1, 1 and 10. So for customer purchases modeling, there are in total 18 models to select from (3×6, three refers to the number of different models, six refers to the number of different penalizer coefficients); for monetary value of customer purchase, similarly, there are in total 6 models to select from (1×6, one refers to the number of different model, six refers to the number of different penalizer coefficients). The generation of different models is illustrated below:
+
+// there is the picture for model pool
+
 
